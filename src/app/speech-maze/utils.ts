@@ -70,7 +70,6 @@ export const words: Array<[string, string]> = [
   ['ta', 'ri'],
   ['tu', 'na'],
   ['ta', 'hu'],
-  ['un', 'ta'],
   ['vi', 'la'],
   ['yo', 'yo'],
   ['wu', 'du'],

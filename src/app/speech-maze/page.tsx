@@ -62,7 +62,7 @@ export default function SpeechMazePage() {
               <button
                 key={`syllable-${index}`}
                 onClick={() => handleClick(syllable)}
-                className="group w-full h-24 bg-white border border-gray-200 rounded-2xl text-3xl font-medium text-gray-800 
+                className="group w-full h-16 bg-white border border-gray-200 rounded-2xl text-xl font-medium text-gray-800 
                          hover:bg-blue-50 hover:border-blue-200 hover:text-blue-700 hover:shadow-lg hover:shadow-blue-100
                          active:scale-[0.98] active:bg-blue-100
                          transition-all duration-200 ease-out
