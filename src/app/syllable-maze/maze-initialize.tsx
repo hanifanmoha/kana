@@ -119,8 +119,8 @@ export function generateMaze(cells: Cell[][]) {
   cells[0][0].isFirst = true; // Mark the first cell
   cells[cells.length - 1][cells[0].length - 1].isLast = true; // Mark the last cell
   // reset isVisited to false
-  for (let row of cells) {
-    for (let cell of row) {
+  for (const row of cells) {
+    for (const cell of row) {
       cell.isVisited = false;
     }
   }
