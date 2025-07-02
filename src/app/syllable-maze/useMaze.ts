@@ -1,19 +1,25 @@
 import { useEffect, useState } from "react";
 import { generateMaze, initializeCells } from "./maze-initialize";
 
-const SIZE = 5
+const SIZE = 4
 
 export default function useMaze() {
 
   const [cells, setCells] = useState(initializeCells(SIZE, SIZE));
   const [currentPos, setCurrentPos] = useState({ r: 0, c: 0 });
-  const [isFinished, setIsFinished] = useState(false);
 
   useEffect(() => {
     const newCells = initializeCells(SIZE, SIZE);
     generateMaze(newCells);
     setCells(newCells);
   }, []);
+
+  function reset() {
+    const newCells = initializeCells(SIZE, SIZE);
+    generateMaze(newCells);
+    setCells(newCells);
+    setCurrentPos({ r: 0, c: 0 });
+  }
 
   function next() {
     const currentCell = cells[currentPos.r][currentPos.c];
@@ -31,16 +37,15 @@ export default function useMaze() {
           })
         })
       })
-    } else {
-      setIsFinished(true);
     }
   }
 
   return {
     cells,
     currentPos,
-    isFinished,
+    isFinished: currentPos.r === SIZE - 1 && currentPos.c === SIZE - 1,
     next,
+    reset,
   }
 
 }
