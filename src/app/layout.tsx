@@ -7,7 +7,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Kana",
+  title: "Kanaa",
   description: "Learn learn learn",
 };
 
