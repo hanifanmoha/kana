@@ -25,7 +25,7 @@ function SyllableMazePage() {
   return (
     <div className="min-h-screen">
       <div className="max-w-sm mx-auto px-8 py-12 h-screen flex flex-col">
-        <h1 className="text-2xl font-bold mb-4">Syllable Maze Lv 1</h1>
+        <h1 className="text-2xl font-bold mb-12">Syllable Maze Lv 1</h1>
         <Maze cells={cells} currentRow={currentPos.r} currentCol={currentPos.c} />
         {!isFinished && <Syllable syllable={currentSyllable} options={options} onClick={handleClick} />}
         {isFinished && <div className="text-center mt-8">
